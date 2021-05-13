@@ -1,5 +1,5 @@
 {
-    "name": "FASTJE/enot-io-client",
+    "name": "fastje/enot-io-client",
     "type": "library",
     "description": "PHP API client for enot.io",
     "keywords": [
