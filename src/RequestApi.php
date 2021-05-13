@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ChurakovMike\EnotIO;
+namespace FASTJE\EnotIO;
 
 use GuzzleHttp\Client;
 use stdClass;
