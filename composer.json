@@ -1,5 +1,5 @@
 {
-    "name": "churakovmike/enot-io-client",
+    "name": "FASTJE/enot-io-client",
     "type": "library",
     "description": "PHP API client for enot.io",
     "keywords": [
@@ -11,13 +11,13 @@
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Churakov Mike",
-            "email": "churakovmike@mail.ru",
+            "name": "DMITRY TARASOV",
+            "email": "fast-jag@ya.ru",
             "role": "Developer"
         }
     ],
     "support": {
-        "email": "churakovmike@mail.ru"
+        "email": "fast-jag@ya.ru"
     },
     "require": {
         "php": "^7.0",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ChurakovMike\\EnotIO\\": "src/"
+            "FASTJE\\EnotIO\\": "src/"
         }
     },
     "config": {
