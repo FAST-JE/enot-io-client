@@ -180,6 +180,20 @@ class Client
             'amount' => $amount,
         ], 'request/payoff');
     }
+    
+     /**
+     * @param array $info
+     * @return stdClass
+     */
+    public function withdrawInfo(array $info): stdClass
+    {
+        $data = [
+            'api_key' => $this->getApiKey(),
+            'email' => $this->getEmail(),
+        ];
+        $data = array_merge($data, $info);
+        return $this->request->send($data, 'request/payoff-info');
+    }
 
     /**
      * @param $sum
