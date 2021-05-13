@@ -170,7 +170,7 @@ class Client
      * @param $amount
      * @return stdClass|mixed
      */
-    public function withdraw(string $service, string $wallet, $amount): stdClass
+    public function withdraw(string $service, string $wallet, $amount, $transactionId): stdClass
     {
         return $this->request->send([
             'api_key' => $this->getApiKey(),
@@ -178,6 +178,7 @@ class Client
             'service' => $service,
             'wallet' => $wallet,
             'amount' => $amount,
+            'orderid' => $transactionId
         ], 'request/payoff');
     }
     
