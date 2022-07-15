@@ -15,7 +15,8 @@ use stdClass;
  */
 class RequestApi
 {
-    protected CONST CONNECTION_TIMEOUT = 10;
+    protected CONST CONNECTION_TIMEOUT = 2;
+    protected CONST TIMEOUT = 4;
     protected CONST HTTP_STATUS_CODE = 200;
 
     /**
@@ -36,7 +37,8 @@ class RequestApi
     {
         $this->http_client = new Client([
             'base_uri' => $host,
-            'timeout' => static::CONNECTION_TIMEOUT,
+            'timeout' => static::TIMEOUT,
+            'connect_timeout' => static::CONNECTION_TIMEOUT,
         ]);
 
         $this->host = $host;
