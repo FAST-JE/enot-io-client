@@ -147,10 +147,10 @@ class Client
      */
     public function getAvailablePaymentServices(): stdClass
     {
-        return $this->request->send([
+        return $this->request->send('request/payment-methods', [
             'merchant_id' => $this->getMerchantId(),
             'secret_key' => $this->getSecretWord(),
-        ], 'request/payment-methods');
+        ]);
     }
 
     /**
@@ -158,10 +158,10 @@ class Client
      */
     public function getBalance(): stdClass
     {
-        return $this->request->send([
+        return $this->request->send('request/balance', [
             'api_key' => $this->getApiKey(),
             'email' => $this->getEmail(),
-        ], 'request/balance');
+        ]);
     }
 
     /**
@@ -172,14 +172,14 @@ class Client
      */
     public function withdraw(string $service, string $wallet, $amount, $transactionId): stdClass
     {
-        return $this->request->send([
+        return $this->request->send('request/payoff', [
             'api_key' => $this->getApiKey(),
             'email' => $this->getEmail(),
             'service' => $service,
             'wallet' => $wallet,
             'amount' => $amount,
             'orderid' => $transactionId
-        ], 'request/payoff');
+        ]);
     }
     
      /**
@@ -193,7 +193,7 @@ class Client
             'email' => $this->getEmail(),
         ];
         $data = array_merge($data, $info);
-        return $this->request->send($data, 'request/payoff-info');
+        return $this->request->send('request/payoff-info', $data);
     }
 
     /**
