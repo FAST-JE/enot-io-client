@@ -20,7 +20,7 @@
         "email": "fast-jag@ya.ru"
     },
     "require": {
-        "php": "^8.3",
+        "php": "^7.4",
         "guzzlehttp/guzzle": "^6.5.x-dev"
     },
     "autoload": {
